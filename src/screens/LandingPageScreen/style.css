@@ -1,0 +1,15 @@
+.landing-page-9 {
+  background-color: transparent !important;
+}
+
+.landing-page-instance {
+  align-self: stretch !important;
+  background-image: url(../../../static/img/picture-7.png) !important;
+  border-radius: 20px !important;
+  box-shadow: var(--shadow-dark-XL) !important;
+  flex: 1 !important;
+  flex-grow: 1 !important;
+  height: unset !important;
+  position: relative !important;
+  width: unset !important;
+}
