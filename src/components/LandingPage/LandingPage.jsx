@@ -1,7 +1,4 @@
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/
+import "./style.css";
 
 import React from "react";
 import { Button } from "../../icons/Button";
@@ -17,9 +14,36 @@ import { ConcreteComponentNode } from "../ConcreteComponentNode";
 import { Picture } from "../Picture";
 import { UserCard } from "../UserCard";
 import { UserThumb } from "../UserThumb";
-import "./style.css";
 
 export const LandingPage = ({ headerClassName, picturePictureClassName }) => {
+  const handleStartFreeClick = () => {
+    alert('Empieza gratis clicked');
+  };
+
+  const handleMoreInfoClick = () => {
+    alert('Más información clicked');
+  };
+
+  const handleSignInClick = () => {
+    alert('Ingresar clicked');
+  };
+
+  const handleSignUpClick = () => {
+    alert('Registrate clicked');
+  };
+
+  const handlePreviousClick = () => {
+    alert('Anterior clicked');
+  };
+
+  const handleNextClick = () => {
+    alert('Siguiente clicked');
+  };
+
+  const handleDemoRequestClick = () => {
+    alert('Solicitar demostración clicked');
+  };
+
   return (
     <div className="landing-page">
       <div className={`header ${headerClassName}`}>
@@ -41,12 +65,12 @@ export const LandingPage = ({ headerClassName, picturePictureClassName }) => {
           </div>
         </div>
         <div className="buttons-group">
-          <button className="text-container-wrapper">
+          <button className="text-container-wrapper" onClick={handleSignInClick}>
             <div className="button-text-wrapper">
               <div className="text-wrapper-3">Ingresar</div>
             </div>
           </button>
-          <button className="div-wrapper">
+          <button className="div-wrapper" onClick={handleSignUpClick}>
             <div className="button-text-wrapper">
               <div className="button-text-2">Registrate</div>
             </div>
@@ -66,12 +90,12 @@ export const LandingPage = ({ headerClassName, picturePictureClassName }) => {
             costos, SliceTicket garantiza que todos paguen su parte justa, sin complicaciones.
           </p>
           <div className="buttons-group-2">
-            <button className="button-2">
+            <button className="button-2" onClick={handleStartFreeClick}>
               <div className="button-text-wrapper">
                 <div className="button-text-3">Registrate Gratis</div>
               </div>
             </button>
-            <button className="button-3">
+            <button className="button-3" onClick={handleMoreInfoClick}>
               <div className="button-text-wrapper">
                 <div className="button-text-3">Seguir Leyendo</div>
               </div>
@@ -217,13 +241,13 @@ export const LandingPage = ({ headerClassName, picturePictureClassName }) => {
           </div>
         </div>
         <div className="arrows">
-          <div className="button-4">
+          <div className="button-4" onClick={handlePreviousClick}>
             <IconJamIconsOutlineLogosArrowLeft className="icon-instance-node" color="white" />
             <div className="button-text-wrapper">
               <div className="text-wrapper-3">Anterior</div>
             </div>
           </div>
-          <div className="button-4">
+          <div className="button-4" onClick={handleNextClick}>
             <div className="button-text-wrapper">
               <div className="text-wrapper-3">Siguiente</div>
             </div>
@@ -238,14 +262,14 @@ export const LandingPage = ({ headerClassName, picturePictureClassName }) => {
             <div className="secondary-headline">Siempre juntos.</div>
           </div>
           <div className="buttons-group-2">
-            <button className="button-2">
+            <button className="button-2" onClick={handleStartFreeClick}>
               <div className="button-text-wrapper">
                 <div className="button-text-3">Empieza gratis</div>
               </div>
             </button>
-            <button className="button-3">
+            <button className="button-3" onClick={handleMoreInfoClick}>
               <div className="button-text-wrapper">
-                <div className="button-text-3">más información</div>
+                <div className="button-text-3">Más información</div>
               </div>
             </button>
           </div>
@@ -306,7 +330,7 @@ export const LandingPage = ({ headerClassName, picturePictureClassName }) => {
                 <div className="link-name-2">Eventos</div>
               </div>
               <div className="footer-components">
-                <div className="text-wrapper-4">Solicitar demostración</div>
+                <div className="text-wrapper-4" onClick={handleDemoRequestClick}>Solicitar demostración</div>
                 <IconJamIconsOutlineLogosArrowRight2 className="icon-instance-node" color="#E2E8F0" />
               </div>
             </div>
@@ -316,21 +340,31 @@ export const LandingPage = ({ headerClassName, picturePictureClassName }) => {
           <div className="text-wrapper-4">SliceTicket@ 2023</div>
           <div className="footer-components-2">
             <div className="link-name-wrapper">
-              <div className="link-name-2">Términos de servicio</div>
+              <a href="/terms-of-service" className="link-name-2">Términos de servicio</a>
             </div>
             <div className="link-name-wrapper">
-              <div className="link-name-2">política de privacidad</div>
+              <a href="/privacy-policy" className="link-name-2">Política de privacidad</a>
             </div>
             <div className="link-name-wrapper">
-              <div className="link-name-2">Administrar cookies</div>
+              <a href="/cookie-management" className="link-name-2">Administrar cookies</a>
             </div>
           </div>
           <div className="div-2">
-            <IconJamIconsOutlineLogosYoutube2 className="icon-instance-node" color="#E2E8F0" />
-            <IconJamIconsOutlineLogosFacebook className="icon-instance-node" color="#E2E8F0" />
-            <IconJamIconsOutlineLogosTwitter className="icon-instance-node" color="#E2E8F0" />
-            <IconJamIconsOutlineLogosInstagram4 className="icon-instance-node" color="#E2E8F0" />
-            <IconJamIconsOutlineLogosLinkedin4 className="icon-instance-node" color="#E2E8F0" />
+            <a href="https://youtube.com/shorts/FCbf8q7SrsQ?si=wGzJgXIrmzREzOOU" target="_blank" rel="noopener noreferrer">
+              <IconJamIconsOutlineLogosYoutube2 className="icon-instance-node" color="#E2E8F0" />
+            </a>
+            <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+              <IconJamIconsOutlineLogosFacebook className="icon-instance-node" color="#E2E8F0" />
+            </a>
+            <a href="https://twitter.com/tomymachuca18" target="_blank" rel="noopener noreferrer">
+              <IconJamIconsOutlineLogosTwitter className="icon-instance-node" color="#E2E8F0" />
+            </a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+              <IconJamIconsOutlineLogosInstagram4 className="icon-instance-node" color="#E2E8F0" />
+            </a>
+            <a href="https://www.linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer">
+              <IconJamIconsOutlineLogosLinkedin4 className="icon-instance-node" color="#E2E8F0" />
+            </a>
           </div>
           <div className="app-download">
             <Button className="button-instance" />
@@ -353,3 +387,4 @@ export const LandingPage = ({ headerClassName, picturePictureClassName }) => {
     </div>
   );
 };
+

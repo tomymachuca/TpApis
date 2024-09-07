@@ -1,3 +1,5 @@
+import "./components/LandingPage/style.css";
+
 import React from "react";
 import ReactDOMClient from "react-dom/client";
 import { LandingPageScreen } from "./screens/LandingPageScreen";
